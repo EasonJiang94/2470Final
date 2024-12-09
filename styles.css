@@ -1,0 +1,78 @@
+/* 將原先 inline style 移入此處 */
+
+/* 原本: style="margin-top:0;margin-bottom:var(--wp--preset--spacing--50);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0" */
+.art-search-section {
+    margin-top:0;
+    margin-bottom:var(--wp--preset--spacing--50);
+    padding-top:0;
+    padding-right:0;
+    padding-bottom:0;
+    padding-left:0;
+}
+
+/* 原本 Filter Section: style="margin-top:20px; flex-direction: column;" */
+.filter-section {
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+}
+
+/* 原本 Filter Heading: style="margin-top: 10px;" */
+.filter-heading {
+    margin-top:10px;
+}
+
+/* 原本 form style: style="margin-top: 15px; display: flex; flex-direction: column; gap: 15px;" */
+.filter-form {
+    margin-top:15px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+/* 原本 row style: style="display: flex; align-items: center; gap: 10px;" */
+.filter-row {
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* 原本 label style: style="font-size:16px;" */
+.filter-label {
+    font-size:16px;
+}
+
+/* 原本 input style: style="padding: 10px; font-size:14px; flex:1;" */
+.filter-input-year {
+    padding:10px;
+    font-size:14px;
+    flex:1;
+}
+
+/* 原本 options style: style="display: flex; gap: 10px;" */
+.filter-options {
+    display:flex;
+    gap:10px;
+}
+
+/* 原本 label for options: style="font-size:14px;" */
+.option-label {
+    font-size:14px;
+}
+
+/* 原本 button style: style="padding:10px 20px; font-size:14px; background-color:#0066cc; color:white; border:none; cursor:pointer; border-radius:5px;" */
+.apply-filter-btn {
+    padding:10px 20px;
+    font-size:14px;
+    background-color:#0066cc;
+    color:white;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+/* 原本 separator style: style="margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20)" */
+.separator-custom {
+    margin-top:var(--wp--preset--spacing--20);
+    margin-bottom:var(--wp--preset--spacing--20);
+}

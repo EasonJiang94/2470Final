@@ -1,0 +1,47 @@
+[
+  {
+    "image_name": "1991-1.jpg",
+    "brief_info": "Harold Cohen, Susan with Plant, 1991",
+    "description": "Harold Cohen, Susan with Plant, 1991. Acrylic and plotter pen on canvas, 85 × 61 in. (215.9 × 154.9 cm). Whitney Museum of American Art, New York; gift of Robert and Deborah Hendel 2023.146. © Harold Cohen Trust",
+    "detail": "Susan with Plant exemplifies how the complex rules in Harold Cohen’s AARON software work together to generate a legible image with abstract elements and fine details. The plotter painting represents a stage in AARON’s evolution, from approximately 1989 onward, in which the composition uses a fully three-dimensional knowledge base. The plotted lines and acrylic color delineate and block areas of the canvas surface to create an environment, with objects placed in the foreground and a figure in the middle ground in front of a textured wall in the background. Figurative works like Susan with Plant demonstrate AARON’s understanding of spatial and anatomical structure, as well as human posture and variations of skin color. The positioning of the eyes, nose, and mouth is not symmetrical but arranged at axes—indicating Cohen’s unique rules for painterly representation. Cohen saw AARON’s figurative works as an abstract form of self-portraiture, an attempt to codify how he, and viewers, understand images.",
+    "year": 1991,
+    "categories": ["Algorithmic"],
+    "subjects": ["Nature", "Human Form"]
+  },
+  {
+    "image_name": "2001-1.jpg",
+    "brief_info": "Harold Cohen, AARON KCAT, 2001",
+    "description": "Harold Cohen, AARON KCAT, 2001. Screenshot. Artificial intelligence software. Dimensions variable. Whitney Museum of American Art, New York; purchase, with funds from the Digital Art Committee 2023.20. © Harold Cohen Trust",
+    "detail": "No Details.",
+    "year": 2001,
+    "categories": ["Algorithmic", "Digital Art"],
+    "subjects": ["Technology"]
+  },
+  {
+    "image_name": "1991-2.jpg",
+    "brief_info": "Harold Cohen, Stephanie & Friend, 1991",
+    "description": "Harold Cohen, Stephanie & Friend, 1993. Acrylic and plotter pen on canvas, 54 × 78 1/4 in. (137.2 × 198.8 cm). Whitney Museum of American Art, New York; gift of Robert and Deborah Hendel 2023.144. © Harold Cohen Trust",
+    "detail": "No Details.",
+    "year": 1991,
+    "categories": ["Algorithmic"],
+    "subjects": ["Human Form"]
+  },
+  {
+    "image_name": "1988-1.jpg",
+    "brief_info": "Harold Cohen, Coming to a Lighter Place, 1988.",
+    "description": "Harold Cohen, Coming to a Lighter Place, 1988. Acrylic and plotter pen on canvas, 54 1/4 × 77 1/8 in. (137.8 × 195.9 cm). Whitney Museum of American Art, New York; gift of Robert and Deborah Hendel 2023.145. © Harold Cohen Trust",
+    "detail": "No Details.",
+    "year": 1988,
+    "categories": ["Abstract", "Algorithmic"],
+    "subjects": []
+  },
+  {
+    "image_name": "2007-1.jpg",
+    "brief_info": "Harold Cohen, AARON Gijon, 2007.",
+    "description": "Harold Cohen, AARON Gijon, 2007. Screenshot. Artificial intelligence software. Dimensions variable. Whitney Museum of American Art, New York; purchase, with funds from the Digital Art Committee 2023.21. ©️ Harold Cohen Trust",
+    "detail": "No Details.",
+    "year": 2007,
+    "categories": ["Algorithmic", "Digital Art"],
+    "subjects": ["Technology"]
+  }
+]
