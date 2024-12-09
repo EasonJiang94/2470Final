@@ -387,12 +387,27 @@ h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-b
             </div>
 			<!-- Modal Structure -->
 			<div id="image-modal" class="modal">
-				<div class="modal-content">
-				<span class="close-button">&times;</span>
-				<img id="modal-image" src="" alt="Artwork Image">
-				<div id="modal-description"></div>
-				</div>
-			</div>
+					// Start of Selection
+					<div class="modal-content">
+					  <span class="close-button">&times;</span>
+					  <div class="modal-body">
+						<div class="left-section">
+						  <img id="modal-image" src="" alt="Artwork Image">
+						  <p id="modal-description" class="description-text"></p>
+						</div>
+						<div class="right-section">
+						  <h3>More Information</h3>
+						  <p id="modal-detail" class="detail-text"></p>
+						</div>
+					  </div>
+					  <div style="text-align: right; margin-top: 10px;">
+						<button type="button" class="find-similar-button" style="padding: 10px 15px; background-color: #0066cc; color: white; border: none; border-radius: 5px; cursor: pointer;">
+						  Find Similar
+						</button>
+					  </div>
+					</div>
+			  </div>
+  
   
             </div>
         </div>

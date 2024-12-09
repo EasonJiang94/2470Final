@@ -24,6 +24,11 @@ document.getElementById("apply-filter").addEventListener("click", function() {
         const gallery = document.getElementById('gallery');
         gallery.innerHTML = '';
 
+        if (filteredArtworks.length === 0) {
+            gallery.innerHTML = '<p>No artworks found for the selected criteria.</p>';
+            return;
+        }
+
         // Group the filtered artworks by year and sort them
         const artworksByYear = filteredArtworks.reduce((acc, artwork) => {
             const year = artwork.year;
@@ -45,42 +50,47 @@ document.getElementById("apply-filter").addEventListener("click", function() {
             yearHeader.textContent = `Year: ${year}`;
             yearSection.appendChild(yearHeader);
 
-            artworksByYear[year].forEach(artwork => {
-                const artDiv = document.createElement('div');
-                artDiv.className = 'artwork';
-                artDiv.style.maxWidth = '600px';
-                artDiv.style.display = 'flex';
-                artDiv.style.flexDirection = 'row';
-                artDiv.style.alignItems = 'center';
-                artDiv.style.justifyContent = 'center'; 
-                artDiv.style.marginBottom = '20px';
-                
-                const img = document.createElement('img');
-                
-                img.src = `images/${artwork.image_name}`;
-                img.alt = artwork.brief_info;
-                img.style.width = '50%';
-                img.style.height = 'auto';
-                img.style.marginRight = '20px';
-                img.style.cursor = 'pointer'; // Indicate that the image is interactive
-                img.addEventListener('click', () => {
-                    showModal(artwork);
+            // Create a container for artworks to allow better layout
+            const artworksContainer = document.createElement('div');
+            artworksContainer.style.display = 'flex';
+            artworksContainer.style.flexWrap = 'wrap';
+            artworksContainer.style.gap = '20px';
+            artworksContainer.style.justifyContent = 'center';
+
+                // Start of Selection
+                // Configure the artworksContainer for horizontal scrolling
+                artworksContainer.style.flexWrap = 'nowrap';
+                artworksContainer.style.overflowX = 'auto';
+                artworksContainer.style.scrollBehavior = 'smooth'; // Optional for smooth scrolling
+                artworksContainer.style.paddingBottom = '10px'; // Optional: Add some padding for scrollbar visibility
+
+                artworksByYear[year].forEach(artwork => {
+                    const artDiv = document.createElement('div');
+                    artDiv.className = 'artwork';
+                    // Optional: Set a fixed width for each artwork to ensure consistent layout
+                    // artDiv.style.minWidth = '200px';
+
+                    const img = document.createElement('img');
+                    img.src = `images/${artwork.image_name}`;
+                    img.alt = artwork.brief_info;
+                    
+                    // 添加點擊事件以顯示模態框
+                    img.addEventListener('click', () => {
+                        showModal(artwork);
+                    });
+
+                    artDiv.appendChild(img);
+
+                    const info = document.createElement('p');
+                    info.textContent = artwork.brief_info;
+                    info.className = 'brief-info';
+                    
+                    artDiv.appendChild(info);
+
+                    artworksContainer.appendChild(artDiv);
                 });
-                
-                
 
-                artDiv.appendChild(img);
-
-                const info = document.createElement('p');
-                info.textContent = artwork.brief_info;
-                info.style.fontSize = '14px';
-                info.style.textAlign = 'left';
-                info.style.width = '50%';
-                
-                artDiv.appendChild(info);
-                yearSection.appendChild(artDiv);
-            });
-
+            yearSection.appendChild(artworksContainer);
             gallery.appendChild(yearSection);
         });
       })
@@ -90,23 +100,25 @@ document.getElementById("apply-filter").addEventListener("click", function() {
       });
 });
 
-// Function to show the modal with image and description
+// Function to show the modal with image, description, and detail
 function showModal(artwork) {
     const modal = document.getElementById('image-modal');
     const modalImage = document.getElementById('modal-image');
     const modalDescription = document.getElementById('modal-description');
+    const modalDetail = document.getElementById('modal-detail');
 
     modalImage.src = `images/${artwork.image_name}`;
     modalImage.alt = artwork.brief_info;
     modalDescription.textContent = artwork.description;
+    modalDetail.textContent = artwork.detail;
 
-    modal.style.display = 'block';
+    modal.classList.add('show');
 }
 
 // Function to close the modal
 function closeModal() {
     const modal = document.getElementById('image-modal');
-    modal.style.display = 'none';
+    modal.classList.remove('show');
 }
 
 // Add event listener to the close button
@@ -119,9 +131,10 @@ window.addEventListener('click', function(event) {
         closeModal();
     }
 });
+
+// Optional: Close modal with 'Escape' key for accessibility
 window.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         closeModal();
     }
 });
-
