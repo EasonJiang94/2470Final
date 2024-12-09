@@ -399,11 +399,23 @@ h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-b
 						  <p id="modal-detail" class="detail-text"></p>
 						</div>
 					  </div>
-					  <div style="text-align: right; margin-top: 10px;">
-						<button type="button" class="find-similar-button" style="padding: 10px 15px; background-color: #0066cc; color: white; border: none; border-radius: 5px; cursor: pointer;">
-						  Find Similar
+  
+					<div class="modal-footer" style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-top: 10px;">
+						<button type="button" id="provide-info-button" style="padding: 10px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">
+							Provide Information
 						</button>
-					  </div>
+						<button type="button" class="find-similar-button" style="padding: 10px 15px; background-color: #0066cc; color: white; border: none; border-radius: 5px; cursor: pointer;">
+							Find Similar
+						</button>
+					</div>
+					<div id="provide-info-form" style="display: none; margin-top: 10px;">
+						<input type="email" id="info-email" placeholder="Your Email" style="padding: 8px; margin-bottom: 8px; width: 100%; box-sizing: border-box;">
+						<textarea id="info-message" placeholder="Your Message" style="padding: 8px; margin-bottom: 8px; width: 100%; box-sizing: border-box;"></textarea>
+						<button type="submit" id="info-submit-button" style="padding: 10px 15px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">
+						Submit
+						</button>
+					</div>
+					  
 					</div>
 			  </div>
   

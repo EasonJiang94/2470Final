@@ -106,11 +106,15 @@ function showModal(artwork) {
     const modalImage = document.getElementById('modal-image');
     const modalDescription = document.getElementById('modal-description');
     const modalDetail = document.getElementById('modal-detail');
+    const provideInfoForm = document.getElementById('provide-info-form');
 
     modalImage.src = `images/${artwork.image_name}`;
     modalImage.alt = artwork.brief_info;
     modalDescription.textContent = artwork.description;
     modalDetail.textContent = artwork.detail;
+
+    // Hide the Provide Information form
+    provideInfoForm.style.display = 'none';
 
     modal.classList.add('show');
 }
@@ -138,3 +142,23 @@ window.addEventListener('keydown', function(event) {
         closeModal();
     }
 });
+
+
+document.getElementById('provide-info-button').addEventListener('click', function() {
+    const form = document.getElementById('provide-info-form');
+    form.style.display = form.style.display === 'none' ? 'block' : 'none';
+  });
+
+  document.getElementById('info-submit-button').addEventListener('click', function() {
+    const email = document.getElementById('info-email').value;
+    const message = document.getElementById('info-message').value;
+    
+    // Handle the submission (e.g., send to server)
+    console.log('User provided info:', { email, message });
+    alert('Thank you for your information!');
+    
+    // Clear the form and hide it
+    document.getElementById('info-email').value = '';
+    document.getElementById('info-message').value = '';
+    document.getElementById('provide-info-form').style.display = 'none';
+  });

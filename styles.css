@@ -248,3 +248,20 @@
     line-height: 1.6;
     /* 移除最大高度和隱藏超出部分 */
   }
+
+
+.modal-footer button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+#provide-info-button {
+    background-color: #28a745;
+}
+
+.find-similar-button {
+    background-color: #0066cc;
+}
